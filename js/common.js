@@ -17,3 +17,29 @@ burgerMenu.addEventListener("click", (e) => {
 });
 
 $(".header-info__columns").clone().appendTo(".header-button-menu__body");
+
+
+// Services Slider
+$('.services-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  slidesPerRow: 3,
+  dots: false,
+  rows: 2,
+  arrows: false,
+  infinite: false,
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 900,
+        settings: {
+          rows: 1,
+          dots: true,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          slidesPerRow: 1
+        },
+    }
+  ]
+});
