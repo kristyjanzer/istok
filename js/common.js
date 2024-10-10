@@ -43,3 +43,56 @@ $('.services-slider').slick({
     }
   ]
 });
+
+// Phone Mask
+$.each($('input#phone'), function (index, val) {
+  $(this).focus(function () {
+    $(this).inputmask('+7 (999) 999-99-99', {
+      clearMaskOnLostFocus: true, showMaskOnHover: false
+    });
+  });
+});
+
+
+// Validate Form
+$('.registration-form').validate({
+  rules: {
+    name: {
+      required: true,
+    },
+    phone: {
+      required: true,
+      minlength: 18,
+      maxlength: 18,
+    },
+    email: {
+      required: true,
+      email: true
+    }
+  },
+  messages: {
+    phone: {
+      required: "Пожалуйста, введите номер полностью"
+    },
+    email: {
+      required: "Пожалуйста, заполните поле"
+    },
+    name: {
+      required: "Пожалуйста, заполните поле"
+    }
+  }
+});
+
+// Form
+// function validate(field){
+//   if(field.val().length === 0){
+//     field.parents('.registration-form__fields').find('.registration-form__button').attr('disabled', true).addClass('registration-form__button--disabled');
+//   }else{
+//     field.parents('.registration-form__fields').find('.registration-form__button').attr('disabled', false).removeClass('registration-form__button--disabled');
+//   }
+//   return field;
+// }
+
+// $('.registration-form__input').blur(function(){
+//   validate($(this));
+// });
