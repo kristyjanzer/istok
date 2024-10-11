@@ -16,7 +16,11 @@ burgerMenu.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
+
 $(".header-info__columns").clone().appendTo(".header-button-menu__body");
+$(".uni-columns .uni-columns__image").clone().appendTo(".uni-image--mobile");
+
+
 
 
 // Services Slider

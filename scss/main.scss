@@ -119,6 +119,14 @@ button {
 	}
 }
 
+.section-row {
+	padding: 90px 0;
+}
+
+.section-title {
+	font-size: 36px;
+	color: $text;
+}
 
 .header {
 	background-color: $accent;
@@ -182,7 +190,7 @@ button {
 }
 
 .header-info-one {
-	.header-connect {
+	.connect-box {
 		display: none;
 	}
 }
@@ -214,7 +222,7 @@ button {
 	}
 }
 
-.header-connect {
+.connect-box {
 	display: flex;
 	flex-direction: column;
 	white-space: nowrap;
@@ -222,6 +230,7 @@ button {
 	&__phone {
 		font-weight: 600;
 		color: $white;
+		line-height: 24px;
 	}
 
 	&__time {
@@ -229,6 +238,15 @@ button {
 		color: $white;
 		font-size: 12px;
 		margin-top: 5px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon {
+		margin-right: 18px;
 	}
 }
 
@@ -271,10 +289,6 @@ button {
 }
 
 .services {
-	&__row {
-		padding: 92px 0 100px;
-	}
-
 	&__title {
 		font-size: 36px;
 	}
@@ -441,14 +455,6 @@ button {
 	justify-content: space-between;
 	gap: 20px;
 
-	&__row {
-		padding: 92px 0 100px;
-	}
-
-	&__title {
-		font-size: 36px;
-	}
-
 	&__lists {
 		margin-top: 44px;
 		display: flex;
@@ -496,10 +502,6 @@ button {
 
 	&__col {
 		width: 49%;
-	}
-
-	&__row {
-		padding: 104px 0;
 	}
 
 	&__title {
@@ -600,6 +602,153 @@ button {
 	}
 }
 
+.advantages {
+	&__subtitle {
+		margin-top: 30px;
+		font-size: 20px;
+		color: $black;
+	}
+
+	&__columns {
+		margin-top: 60px;
+	}
+
+	&__descr {
+		margin-top: 60px;
+	}
+}
+
+.advantages-descr {
+	font-size: 22px;
+		font-weight: 600;
+
+		&--accent {
+			color: $accent;
+		}
+}
+
+.uni-columns {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	&__col {
+		width: 49%;
+	}
+
+	&__text {
+		font-size: 18px;
+		color: $black;
+		font-weight: 600;
+	}
+	&__list {
+		margin-top: 25px;
+	}
+}
+
+.uni-image--mobile {
+	display: none;
+}
+
+
+.uni-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	&__item {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__image {
+		margin-right: 20px;
+		font-size: 0;
+
+		img {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 120%;
+		color: #091520;
+	}
+}
+
+.footer {
+	background-color: #163B43;
+
+	&__row {
+		padding: 100px 0 248px;
+	}
+
+	&__columns {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__col {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 105px;
+
+		&:not(:first-child) {
+			margin-top: 56px;
+		}
+	}
+	
+	&__descr {
+		font-size: 16px;
+		font-weight: 400;
+		color: $white;
+	}
+
+	&__logo {
+		img {
+			min-width: 195px;
+		}
+	}
+
+	&__connect {
+		.connect-box__time {
+			font-size: 16px;
+		}
+	}
+}
+
+.footer-info {
+	display: flex;
+	gap: 128px;
+
+	&__title {
+		color: $white;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	&__connect {
+		margin-top: 44px;
+	}
+
+	&__list {
+		margin-top: 20px;
+	}
+}
+
+.footer-info-list {
+	&__item {
+		color: $white;
+		font-weight: 400;
+
+		&:not(:first-child) {
+			margin-top: 15px;
+		}
+	}
+}
 
 
 
@@ -700,7 +849,7 @@ button {
 			order: 1;
 		}
 
-		.header-connect {
+		.connect-box {
 			display: flex;
 			order: 2;
 		}
@@ -711,7 +860,7 @@ button {
 	}
 
 	.header-info-two {
-		.header-connect {
+		.connect-box {
 			display: none;
 		}
 	}
@@ -729,7 +878,7 @@ button {
 		}
 	}
 
-	.header-connect {
+	.connect-box {
 		&__phone {
 			font-size: 20px;
 		}
@@ -830,12 +979,35 @@ button {
 		}
 	}
 
-	.header-logo {
+	.logo {
 		font-size: 0;
 
 		img {
 			height: 65px;
 		}
+	}
+
+	.uni-columns {
+		flex-direction: column;
+
+		&__col {
+			width: 100%;
+
+			&:not(:first-child) {
+				margin-top: 60px;
+			}
+
+			&--image {
+				display: none;
+			}
+		}
+	}
+
+	.uni-image--mobile {
+		margin-top: 60px;
+		display: block;
+		margin-right: -20px;
+		margin-left: -20px;
 	}
 
 	.uni-list {
@@ -846,10 +1018,6 @@ button {
 		&__item {
 			width: 100%;
 			margin-right: 0;
-		}
-	
-		&__text {
-			font-size: 16px;
 		}
 	}
 
@@ -865,16 +1033,15 @@ button {
 		}
 	}
 
+	.section-row {
+		padding: 50px 0;
+	}
+
+	.section-title {
+		font-size: 30px;
+	}
+
 	.principles {
-
-		&__row {
-			padding: 63px 0 75px;
-		}
-
-		&__title {
-			font-size: 30px;
-		}
-
 		&__lists {
 			margin-top: 28px;
 			flex-direction: column;
@@ -902,26 +1069,28 @@ button {
 	}
 
 	.services {
-		&__row {
-			padding: 52px 0 50px;
-		}
-
-		&__title {
-			font-size: 30px;
-		}
-
 		&__descr {
 			font-size: 16px;
 		}
 	}
 
 	.registration {
-		&__row {
-			padding: 85px 0;
-		}
-
 		&__title {
 			font-size: 24px;
+		}
+	}
+
+	.advantages {
+		&__subtitle {
+			margin-top: 25px;
+		}
+
+		&__columns {
+			margin-top: 55px;
+		}
+
+		&__descr {
+			margin-top: 50px;
 		}
 	}
 }
@@ -929,8 +1098,12 @@ button {
 @media (max-width: 600px) {
 	.main-info {
 		background-position: 80% 100%;
+
+		&__button {
+			max-width: 100%;
+		}
 	}
-	
+
 	.registration-form {
 		&__fields {
 			flex-direction: column;
