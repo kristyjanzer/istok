@@ -182,6 +182,7 @@ button {
 		display: flex;
     flex-direction: column;
     align-items: flex-end;
+		font-family: 'Montserrat';
 	}
 
 	&__list {
@@ -690,11 +691,14 @@ button {
 		flex-direction: column;
 	}
 
+	&__logo {
+		margin-right: 105px;
+	}
+
 	&__col {
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
-		gap: 105px;
 
 		&:not(:first-child) {
 			margin-top: 56px;
@@ -714,6 +718,8 @@ button {
 	}
 
 	&__connect {
+		margin-right: 127px;
+
 		.connect-box__time {
 			font-size: 16px;
 		}
@@ -722,20 +728,26 @@ button {
 
 .footer-info {
 	display: flex;
-	gap: 128px;
+	gap: 45px;
 
 	&__title {
 		color: $white;
 		font-size: 20px;
 		font-weight: 600;
+		margin-bottom: 20px;
 	}
 
-	&__connect {
-		margin-top: 44px;
+	&__item {
+		min-width: 200px;
 	}
 
-	&__list {
-		margin-top: 20px;
+	&__about {
+		min-width: 20%;
+	}
+
+	&__column {
+		display: flex;
+		gap: 12%;
 	}
 }
 
@@ -747,6 +759,18 @@ button {
 		&:not(:first-child) {
 			margin-top: 15px;
 		}
+	}
+}
+
+.footer-connect {
+	&__title {
+		color: $white;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	&__connect-box {
+		margin-top: 44px;
 	}
 }
 
@@ -970,7 +994,7 @@ button {
 		width: 20px;
 		height: 20px;
 		top: 0;
-		right: 5px;
+		right: 4px;
 	}
 
 	.header {
@@ -1091,6 +1115,57 @@ button {
 
 		&__descr {
 			margin-top: 50px;
+		}
+	}
+
+	.footer {
+		&__row {
+			padding: 50px 0;
+		}
+
+		&__col {
+			flex-direction: column;
+
+			&:not(:first-child){
+				margin-top: 20px;
+			}
+		}
+
+		&__descr {
+			margin-top: 25px;
+		}
+
+		&__order {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__connect {
+			order: 2;
+			margin-top: 26px;
+
+			.connect-box__phone {
+				font-size: 16px;
+			}
+		}
+
+		&__info {
+			order: 1;
+		}
+	}
+
+	.footer-info {
+		flex-direction: column;
+		gap: 30px;
+
+		&__column {
+			flex-direction: column;
+		}
+	}
+
+	.footer-connect {
+		&__connect-box {
+			margin-top: 16px;
 		}
 	}
 }
