@@ -101,3 +101,21 @@ $('.registration-form').validate({
 // $('.registration-form__input').blur(function(){
 //   validate($(this));
 // });
+
+// Dropmenu
+$('.registry-form-select').click(function () {
+  $(this).attr('tabindex', 1).focus();
+  $(this).toggleClass('registry-form-select--active');
+  $(this).find('.registry-form-select__options').slideToggle(300);
+});
+$('.registry-form-select').focusout(function () {
+  $(this).removeClass('registry-form-select--active');
+  $(this).find('.registry-form-select__options').slideUp(300);
+});
+$('.registry-form-select__option').click(function () {
+  $(this).parents('.registry-form-select').find('.registry-form-select__span').text($(this).text());
+  $(this).parents('.registry-form-select').find('.registry-form-select__icon').addClass("registry-form__icon--ok");
+  $(this).parents('.registry-form__field').addClass("registry-form__field--success");
+  $(this).parents('.registry-form-select').find('.registry-form-select__input').attr('value', $(this).attr('id'));
+  // $(this).parents('.registry-form__columns').find('.registry-form__button').attr('disabled', false).removeClass('registry-form__button--disabled');
+});

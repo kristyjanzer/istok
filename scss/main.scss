@@ -292,12 +292,15 @@ button {
 .services {
 	&__title {
 		font-size: 36px;
+
+		& + .services__descr {
+			margin-top: 20px;
+		}
 	}
 
 	&__descr {
 		font-size: 20px;
 		color: $black;
-		margin-top: 20px;
 	}
 
 	&__slider {
@@ -508,12 +511,18 @@ button {
 	}
 
 	&__title {
+		color: $white;
+		font-size: 40px;
+		text-align: center;
+	}
+
+	&__subtitle {
 		font-size: 26px;
 		font-weight: 600;
 		color: $white;
 	}
 
-	&__descr {
+	&__text {
 		margin-top: 23px;
 		font-size: 20px;
 		color: $white;
@@ -524,10 +533,19 @@ button {
 		margin-left: 10px;
 	}
 
-	&__text {
+	&__descr {
 		font-size: 16px;
 		color: $white;
 		margin-bottom: 30px;
+	}
+
+	&__caption {
+		text-align: center;
+		margin-top: 5px;
+		margin-bottom: 40px;
+		font-weight: 400;
+		font-size: 18px;
+		color: $white;
 	}
 }
 
@@ -592,6 +610,7 @@ button {
 	&__field {
 		max-width: 47%;
     width: 100%;
+		position: relative;
 	}
 
 	&__button {
@@ -603,6 +622,98 @@ button {
     font-size: 16px;
     min-height: 60px;
 	}
+}
+
+.registry-form__icon,
+.registry-form-select__icon {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+}
+.registry-form__icon {
+	display: none;
+}
+.registry-form-select__icon::before {
+	content: '';
+	position: absolute;
+	background-image: url('../img/arrow-select.svg');
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 7px;
+}
+.registry-form__field--success .registry-form__icon--ok {
+	display: block;
+}
+.registry-form__field--success .registry-form-select__span,
+.registry-form__field--success .registry-form__item {
+	color: #30A9CF;
+}
+.registry-form__icon--ok::before {
+	position: absolute;
+	content: '';
+	background-image: url('../img/form-check.svg');
+	background-repeat: no-repeat;
+	width: 15px;
+	height: 10px;
+}
+.registry-form-select {
+	transition: all .5s ease;
+	display: block;
+	outline: 0;
+}
+
+.registry-form-select__select {
+	cursor: pointer;
+	display: block;
+}
+
+.registry-form-select__options {
+	position: absolute;
+	color: #000;
+	background-color: #fff;
+	width: 100%;
+	top: 98%;
+	left: -1px;
+	margin-top: 2px;
+	border-radius: 0 1px 5px 5px;
+	overflow: hidden;
+	display: none;
+	max-height: 200px;
+	overflow-y: auto;
+	z-index: 9;
+	padding: 0;
+	list-style: none;
+	border: 1px solid #30A9CF;
+	border-top: 0;
+	box-sizing: content-box;
+}
+
+.registry-form-select__options::-webkit-scrollbar {
+	width: 5px;
+}
+
+.registry-form-select__options::-webkit-scrollbar-thumb {
+	border-radius: 10px; 
+  border: 3px solid #eee;
+}
+
+.registry-form-select__span {
+	font-size: 14px;
+	line-height: 19px;
+	color: #777777;
+}
+
+.registry-form-select__option {
+	padding: 10px;
+	transition: all .2s ease;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 19px;
+	color: #777777;
+}
+
+.registry-form-select__option:hover {
+	background: rgba(48, 169, 207, 0.2);
 }
 
 .advantages {
@@ -776,6 +887,29 @@ button {
 	}
 }
 
+.vnutri {
+	.section-row {
+		padding: 63px 0;
+	}
+}
+
+
+.heading {
+	background-image: url('../img/heading/services.jpeg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__row {
+		padding: 60px 0 68px;
+	}
+
+	&__title {
+		font-size: 42px;
+		color: $text;
+	}
+}
+
 
 
 
@@ -793,7 +927,7 @@ button {
 			width: 100%;
 		}
 
-		&__text {
+		&__descr {
 			margin-top: 30px;
 		}
 	}
@@ -1105,7 +1239,7 @@ button {
 	}
 
 	.registration {
-		&__title {
+		&__subtitle {
 			font-size: 24px;
 		}
 	}
