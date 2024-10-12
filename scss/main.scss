@@ -301,8 +301,8 @@ button {
 	}
 
 	&__slider {
-		margin-top: 45px;
 		padding-bottom: 33px;
+		margin: 45px -10px 0;
 	}
 }
 
@@ -397,6 +397,8 @@ button {
 	}
 
 	.slick-slide {
+		margin: 0 10px;
+
 		> div {
 			display: flex;
 	
@@ -1095,6 +1097,10 @@ button {
 	.services {
 		&__descr {
 			font-size: 16px;
+		}
+
+		&__slider {
+			margin-top: 26px;
 		}
 	}
 
