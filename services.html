@@ -33,7 +33,7 @@
 	<div class="header">
 		<div class="container">
 			<div class="header__row">
-				<a href="#" class="header__logo logo">
+				<a href="index.html" class="header__logo logo">
 					<img src="img/logo.svg" alt="Logo">
 				</a>
 				<div class="header__info header-info">
@@ -66,7 +66,7 @@
 							<div class="header-info__menu">
 								<ul class="header-info__list header-list">
 									<li class="header-list__item">
-										<a href="#" class="header-list__link">Виды работ</a>
+										<a href="services.html" class="header-list__link">Виды работ</a>
 									</li>
 									<li class="header-list__item">
 										<a href="#" class="header-list__link">О компании</a>
@@ -188,33 +188,63 @@
 				<div class="registration__row section-row">
 					<h2 class="registration__title">Ответим на ваши вопросы</h2>
 					<p class="registration__caption">Оставьте контактные данные и мы свяжемся с вами в ближайшее время</p>
-					<form class="registration__form registration-form registry-form">
+					<form class="registration__form registration-form">
 						<div class="registration-form__fields">
 							<div class="registration-form__field">
-								<input type="text" name="name" id="name" class="registration-form__input name" required="" autocomplete="off" minlength="2" placeholder="Введите ваше имя">
+								<input type="text" name="name" id="name" class="registration-form__elem name" required="" autocomplete="off" minlength="2" placeholder="Введите ваше имя">
 							</div>
 							<div class="registration-form__field">
-								<input type="text" name="phone" id="phone" class="registration-form__input phone" required="" autocomplete="off" placeholder="Введите ваш телефон">
+								<input type="text" name="phone" id="phone" class="registration-form__elem phone" required="" autocomplete="off" placeholder="Введите ваш телефон">
 							</div>
 							<div class="registration-form__field">
-								<input type="text" name="email" id="email" class="registration-form__input email" required="" autocomplete="off" placeholder="Введите ваш email">
+								<input type="text" name="email" id="email" class="registration-form__elem email" required="" autocomplete="off" placeholder="Введите ваш email">
 							</div>
 							<div class="registration-form__field">
-								<button type="submit" class="registration-form__button">Отправить заявку</button>
-							</div>
-							<div class="registration-form__field registry-form__field">
-								<div class="registry-form-select registry-form__item">
-									<div class="registry-form-select__select">
-										<i class="registry-form-select__icon" aria-hidden="true"></i>
-										<span class="registry-form-select__span">Физическое лицо</span>
+								<div class="registration-form-select registration-form__elem">
+									<div class="registration-form-select__select">
+										<i class="registration-form-select__icon" aria-hidden="true"></i>
+										<span class="registration-form-select__span">Физическое лицо</span>
 									</div>
-									<input class="registry-form-select__input" type="hidden">
-									<ul class="registry-form-select__options">
-										<li class="registry-form-select__option">Физическое лицо</li>
-										<li class="registry-form-select__option">Юридическое лицо</li>
+									<input class="registration-form-select__input" type="hidden">
+									<ul class="registration-form-select__options">
+										<li class="registration-form-select__option">Физическое лицо</li>
+										<li class="registration-form-select__option">Юридическое лицо</li>
 									</ul>
 								</div>
-								<i class="registry-form__icon"></i>
+								<i class="registration-form__icon"></i>
+							</div>
+							<div class="registration-form__field">
+								<textarea class="registration-form__elem" rows="1" name="textarea" placeholder="Комментарий" autocomplete="off"></textarea>
+							</div>
+							<div class="registration-form__field">
+								<div class="registration-form__dropzone registration-form-dropzone">
+									<div class="registration-form-dropzone__body">
+										<div class="registration-form-dropzone__row">
+											<div class="registration-form-dropzone__input">
+												<input type="file" name="file" class="file-upload-input"
+													onchange="readURL(this);" accept=".pdf,.docx,.doc,.txt,.jpg,.jpeg,.png">
+											</div>
+											<div class="registration-form-dropzone__title">
+												Добавить файл (не обязательно)
+											</div>
+										</div>
+										<div class="vacancy__dropzone-upload registration-form-dropzone__upload">
+											<div class="registration-form-dropzone__message">
+												<img class="registration-form-dropzone__image" src="img/form-check.svg" alt="Ваш файл">
+												<div class="registration-form-dropzone__text">Файл загружен</div>
+											</div>
+											<div class="registration-form-dropzone__remove-wrap">
+												<button type="button" onclick="removeUpload()"
+													class="registration-form-dropzone__remove">Удалить <span class="registration-form-dropzone__remove-title">Uploaded Image</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="registration-form__columns">
+								<p class="registration-form__descr">Нажимая на кнопку «Отправить заявку» Вы даете согласие на обработку своих персональных данных.</p>
+								<button type="submit" class="registration-form__button">Отправить заявку</button>
 							</div>
 						</div>
 					</form>
@@ -228,7 +258,7 @@
 			<div class="footer__row">
 				<div class="footer__columns">
 					<div class="footer__col">
-						<a href="#" class="footer__logo logo">
+						<a href="index.html" class="footer__logo logo">
 							<img src="img/logo.svg" alt="Logo">
 						</a>
 						<p class="footer__descr">Инженерно-строительная компания «Исток» оказывает услуги по возведению жилой и коммерческой недвижимости. Мы реализуем проекты разного уровня сложности, разрабатывая индивидуальные решения для каждого объекта.</p>
@@ -252,23 +282,40 @@
 							<div class="footer-info__about">
 								<div class="footer-info__title">Главная</div>
 								<ul class="footer-info__list footer-info-list">
-									<li class="footer-info-list__item">О компании</li>
-									<li class="footer-info-list__item">Вакансии</li>
-									<li class="footer-info-list__item">Контакты</li>
+									<li class="footer-info-list__item">
+										<a href="#" class="footer-info-list__link">О компании</a>
+									</li>
+									<li class="footer-info-list__item">
+										<a href="#" class="footer-info-list__link">Вакансии</a>
+									</li>
+									<li class="footer-info-list__item">
+										<a href="#" class="footer-info-list__link">Контакты</a>
+									</li>
 								</ul>
 							</div>
 							<div class="footer-info__box">
 								<div class="footer-info__title">Виды работ</div>
 								<div class="footer-info__column">
 									<ul class="footer-info__list footer-info-list">
-										<li class="footer-info-list__item">Отделочные работы квартир, помещений, домов и коттеджей</li>
-										<li class="footer-info-list__item">Частичный  ремонт</li>
-										<li class="footer-info-list__item">Мелкий ремонт <br> (услуга «муж на час»)</li>
+										<li class="footer-info-list__item">
+											<a href="#" class="footer-info-list__link">Отделочные работы квартир, помещений, домов и коттеджей</a>
+										</li>
+										<li class="footer-info-list__item">
+											<a href="#" class="footer-info-list__link">Частичный  ремонт</a>
+										</li>
+										<li class="footer-info-list__item">
+											<a href="#" class="footer-info-list__link">Мелкий ремонт <br> (услуга «муж на час»)</a>
+										</li>
 									</ul>
 									<ul class="footer-info__list footer-info-list">
-										<li class="footer-info-list__item">Электромонтажные работы и инженерная сантехника</li>
-										<li class="footer-info-list__item">Строительство домов <br> и коттеджей «под ключ»</li>
-										<li class="footer-info-list__item">Промышленное строительство быстровозводимых производственных зданий
+										<li class="footer-info-list__item">
+											<a href="#" class="footer-info-list__link">Электромонтажные работы и инженерная сантехника</a>
+										</li>
+										<li class="footer-info-list__item">
+											<a href="#" class="footer-info-list__link">Строительство домов <br> и коттеджей «под ключ»</a>
+										</li>
+										<li class="footer-info-list__item">
+											<a href="#" class="footer-info-list__link">Промышленное строительство быстровозводимых производственных зданий</a>
 										</li>
 									</ul>
 								</div>
