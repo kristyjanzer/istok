@@ -24,7 +24,7 @@ $(".uni-columns .uni-columns__image").clone().appendTo(".uni-image--mobile");
 
 
 // Services Slider
-$('.services-slider').slick({
+$('.main-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   slidesPerRow: 3,
@@ -88,19 +88,6 @@ $('.registration-form').validate({
   }
 });
 
-// Form
-// function validate(field){
-//   if(field.val().length === 0){
-//     field.parents('.registration-form__fields').find('.registration-form__button').attr('disabled', true).addClass('registration-form__button--disabled');
-//   }else{
-//     field.parents('.registration-form__fields').find('.registration-form__button').attr('disabled', false).removeClass('registration-form__button--disabled');
-//   }
-//   return field;
-// }
-
-// $('.registration-form__input').blur(function(){
-//   validate($(this));
-// });
 
 // Dropmenu
 $('.registration-form-select').click(function () {
@@ -117,7 +104,6 @@ $('.registration-form-select__option').click(function () {
   $(this).parents('.registration-form-select').find('.registration-form-select__icon').addClass("registration-form__icon--ok");
   $(this).parents('.registration-form__field').addClass("registration-form__field--success");
   $(this).parents('.registration-form-select').find('.registration-form-select__input').attr('value', $(this).attr('id'));
-  // $(this).parents('.registration-form__columns').find('.registration-form__button').attr('disabled', false).removeClass('registration-form__button--disabled');
 });
 
 
