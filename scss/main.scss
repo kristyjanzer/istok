@@ -233,6 +233,8 @@ button {
 	}
 
 	&__item {
+		white-space: nowrap;
+		
 		&:not(:last-child) {
 			margin-right: 32px;
 		}
@@ -1110,6 +1112,18 @@ button {
 
 
 @media (max-width: 1100px) {
+	.header-info {
+		&__list {
+			margin-right: 20px;
+		}
+	}
+
+	.header-list {
+		&__item:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
 	.registration {
 		&__columns {
 			flex-direction: column;
