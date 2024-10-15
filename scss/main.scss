@@ -1244,6 +1244,10 @@ button {
 		&--accent {
 			flex-direction: column;
 
+			.connect-box__link {
+				font-size: 20px;
+			}
+
 			.connect-box__item {
 				&:not(:first-child) {
 					margin-top: 28px;
