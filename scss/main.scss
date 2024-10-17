@@ -125,10 +125,15 @@ button {
 
 .section-title {
 	font-size: 36px;
+	font-weight: 500;
 	color: $text;
 
 	& + .section-descr {
 		margin-top: 20px;
+	}
+
+	& + .uni-columns-margin {
+		margin-top: 35px;
 	}
 }
 
@@ -142,6 +147,10 @@ button {
 
 	& + & {
 		margin-top: 20px;
+	}
+
+	& + .uni-columns-margin {
+		margin-top: 55px;
 	}
 }
 
@@ -390,7 +399,7 @@ button {
 
 	&__item {
 		min-height: 550px;
-		border: 2px solid $accent;
+		border: 2px solid rgba(10, 132, 126, 0.5);
 		background: $white;
 		height: auto;
 
@@ -441,7 +450,7 @@ button {
 
 
 .principles {
-	background-color: #F9F9F9;
+	background-color: rgba(10, 132, 126, 0.2);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -844,18 +853,10 @@ button {
 
 
 .advantages {
-	&__subtitle {
+	&__descr {
 		margin-top: 30px;
 		font-size: 20px;
 		color: $black;
-	}
-
-	&__columns {
-		margin-top: 60px;
-	}
-
-	&__postscript {
-		margin-top: 60px;
 	}
 }
 
@@ -867,6 +868,10 @@ button {
 		font-weight: 600;
 		color: $accent;
 	}
+}
+
+.uni-postscript-margin {
+	margin-top: 60px;
 }
 
 .uni-columns {
@@ -885,9 +890,18 @@ button {
 		color: $black;
 		font-weight: 600;
 	}
+
 	&__list {
 		margin-top: 30px;
 	}
+
+	& + .uni-postscript {
+		margin-top: 60px;
+	}
+}
+
+.uni-columns-margin {
+	margin-top: 55px;
 }
 
 .uni-image--mobile {
@@ -1029,7 +1043,8 @@ button {
 	}
 }
 
-#company {
+#company,
+#building {
 	.heading {
 		background-image: url('../img/heading/company.jpeg');
 	}
@@ -1066,43 +1081,57 @@ button {
 	&__title {
 		font-size: 42px;
 		color: $text;
+		font-weight: 500;
 	}
 }
 
-.company {
-	&__columns {
-		margin-top: 56px;
-	}
-}
 
-.vacancy {
-	&__postscript {
-		margin-top: 68px;
-	}
-
-	&__columns {
-		margin-top: 62px;
-	}
-}
 
 .works-section-slider {
-	background-color: #F9F9F9;
+	background-color: rgba(10, 132, 126, 0.2);
 	padding: 100px 0 110px;
 }
 
-.contacts {
-	&__columns {
-		margin-top: 56px;
-	}
-	
-	&__postscript {
-		margin-top: 68px;
-	}
-}
 
 .contacts-links {
 	&__box {
 		margin-top: 23px;
+	}
+}
+
+.documents {
+	&__columns {
+		margin-top: 33px;
+	}
+}
+
+.documents-columns {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__file {
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon {
+		margin-right: 25px;
+	}
+
+	&__text {
+		font-size: 20px;
+		color: $black;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -1401,6 +1430,10 @@ button {
 				display: none;
 			}
 		}
+
+		& + .uni-postscript-margin {
+			margin-top: 50px;
+		}
 	}
 
 	.uni-descr {
@@ -1424,6 +1457,10 @@ button {
 			width: 100%;
 			margin-right: 0;
 		}
+	}
+
+	.uni-postscript-margin {
+		margin-top: 50px;
 	}
 
 	.main-info {
@@ -1522,12 +1559,8 @@ button {
 	}
 
 	.advantages {
-		&__subtitle {
+		&__descr {
 			margin-top: 25px;
-		}
-
-		&__columns {
-			margin-top: 55px;
 		}
 	}
 
@@ -1588,16 +1621,36 @@ button {
 		}
 	}
 
-	.vacancy {
-		&__postscript {
-			margin-top: 37px;
+
+	.works-section-slider {
+		padding: 86px 0 120px;
+	}
+	
+	.documents-columns {
+		flex-direction: column;
+		align-items: flex-start;
+
+		&__item {
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+
+			&:not(:first-child) {
+				margin-top: 18px;
+			}
+		}
+
+		&__text {
+			font-size: 18px;
 		}
 	}
 }
 
-.works-section-slider {
-	padding: 86px 0 120px;
-}
+
+
+
+
+
 
 @media (max-width: 600px) {
 	.main-info {
