@@ -120,7 +120,7 @@ button {
 }
 
 .section-row {
-	padding: 90px 0;
+	padding: 70px 0;
 }
 
 .section-title {
@@ -129,7 +129,17 @@ button {
 	color: $text;
 
 	& + .section-descr {
-		margin-top: 20px;
+		margin-top: 25px;
+	}
+}
+
+.section-subtitle {
+	font-size: 32px;
+	font-weight: 500;
+	color: $text;
+
+	& + .section-descr {
+		margin-top: 25px;
 	}
 
 	& + .uni-columns-margin {
@@ -141,7 +151,7 @@ button {
 	font-size: 20px;
 	color: $black;
 
-	& + .section-title {
+	& + .section-subtitle {
 		margin-top: 42px;
 	}
 
@@ -331,7 +341,7 @@ button {
 }
 
 .services,
-.works-section-slider {
+.section-slider {
 	&__slider {
 		padding-bottom: 33px;
 		margin: 45px -10px 0;
@@ -440,11 +450,11 @@ button {
 	.slick-dots {
 		bottom: 0;
 	}
-}
 
-.works-slider {
-	.main-slider__item {
-		min-height: 370px;
+	&--dop {
+		.main-slider__item {
+			min-height: 340px;
+		}
 	}
 }
 
@@ -885,7 +895,7 @@ button {
 		width: 49%;
 	}
 
-	&__text {
+	&__title {
 		font-size: 20px;
 		color: $black;
 		font-weight: 600;
@@ -1065,38 +1075,37 @@ button {
 	}
 }
 
-#services {
-	.section-row {
-		padding: 63px 0;
-	}
-
+#services,
+#finishing {
 	.heading {
-		background-image: url('../img/heading/services.jpeg');
+		background-image: url('../img/heading/heading-3.jpeg');
 	}
 }
 
 #company,
 #building {
 	.heading {
-		background-image: url('../img/heading/company.jpeg');
+		background-image: url('../img/heading/heading-1.jpeg');
 	}
 }
 
-#vacancy {
+#vacancy,
+#partial-repair,
+#electrical {
 	.heading {
-		background-image: url('../img/heading/vacancy.jpeg');
+		background-image: url('../img/heading/heading-4.jpeg');
 	}
 }
 
 #works {
 	.heading {
-		background-image: url('../img/heading/works.jpeg');
+		background-image: url('../img/heading/heading-5.jpeg');
 	}
 }
 
 #contacts {
 	.heading {
-		background-image: url('../img/heading/contacts.jpeg');
+		background-image: url('../img/heading/heading-2.jpeg');
 	}
 }
 
@@ -1119,7 +1128,7 @@ button {
 
 
 
-.works-section-slider {
+.section-slider {
 	background-color: rgba(10, 132, 126, 0.2);
 	padding: 100px 0 110px;
 }
@@ -1166,6 +1175,14 @@ button {
 		}
 	}
 }
+
+.doing {
+	&__title {
+		margin-bottom: 30px;
+	}
+}
+
+
 
 
 
@@ -1455,7 +1472,7 @@ button {
 			width: 100%;
 
 			&:not(:first-child) {
-				margin-top: 60px;
+				margin-top: 20px;
 			}
 
 			&--image {
@@ -1539,6 +1556,10 @@ button {
 		font-size: 30px;
 	}
 
+	.section-subtitle {
+		font-size: 24px;
+	}
+
 	.section-descr {
 		font-size: 16px;
 	}
@@ -1571,7 +1592,7 @@ button {
 	}
 
 	.services,
-	.works-section-slider {
+	.section-slider {
 		&__slider {
 			margin-top: 26px;
 		}
@@ -1603,7 +1624,7 @@ button {
 	}
 
 	.heading {
-		background-position: 55% 100%;
+		background-position: 51% 100%;
 
 		&__row {
 			padding: 50px 0 60px;
@@ -1663,6 +1684,12 @@ button {
 		&__column {
 			flex-direction: column;
 		}
+
+		&__list {
+			&:not(:first-child) {
+				margin-top: 15px;
+			}
+		}
 	}
 
 	.footer-connect {
@@ -1672,8 +1699,8 @@ button {
 	}
 
 
-	.works-section-slider {
-		padding: 86px 0 120px;
+	.section-slider {
+		padding: 50px 0;
 	}
 	
 	.documents-columns {
