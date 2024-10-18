@@ -912,9 +912,19 @@ button {
 .uni-list {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	gap: 20px;
 
 	&__item {
+		display: flex;
+		align-items: flex-start;
+
+		&--inside {
+			flex-direction: column;
+		}
+	}
+
+	&__row {
 		display: flex;
 		align-items: flex-start;
 	}
@@ -934,6 +944,28 @@ button {
 		line-height: 120%;
 		color: #091520;
 	}
+}
+
+.uni-list-inside {
+	display: flex;
+
+	&__item {
+		list-style-type: disc;
+
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
+
+	&__list {
+		&:not(:last-child) {
+			margin-right: 56px;
+		}
+	}
+}
+
+.uni-list-inside-margin {
+	margin: 22px 0 22px 68px;
 }
 
 .footer {
@@ -1463,6 +1495,25 @@ button {
 		margin-top: 50px;
 	}
 
+	.uni-list-inside {
+		flex-direction: column;
+
+		&__list {
+			&:not(:first-child) {
+				margin-top: 10px;
+			}
+
+			&:not(:last-child) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.uni-list-inside-margin {
+		margin-top: 17px;
+		margin-bottom: 17px;
+	}
+
 	.main-info {
 		padding: 46px 0 270px;
 		
@@ -1477,7 +1528,12 @@ button {
 
 	.section-row {
 		padding: 50px 0;
+
+		&--no-pb {
+			padding-bottom: 0;
+		}
 	}
+	
 
 	.section-title {
 		font-size: 30px;
@@ -1612,12 +1668,6 @@ button {
 	.footer-connect {
 		&__connect-box {
 			margin-top: 16px;
-		}
-	}
-
-	#company {
-		.company__row {
-			padding-bottom: 0;
 		}
 	}
 
