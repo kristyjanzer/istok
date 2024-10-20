@@ -24,7 +24,7 @@ $(".uni-columns .uni-columns__image").clone().appendTo(".uni-image--mobile");
 
 
 // Services Slider
-$('.main-slider').slick({
+$('.uni-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   slidesPerRow: 3,
@@ -43,6 +43,38 @@ $('.main-slider').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           slidesPerRow: 1,
+          adaptiveHeight: true
+        },
+    }
+  ]
+});
+
+// Services Slider
+$('.finishing-slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: false,
+  arrows: false,
+  infinite: false,
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 1100,
+        settings: {
+          dots: true,
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          adaptiveHeight: true
+      },
+    },
+    {
+      breakpoint: 900,
+        settings: {
+          dots: true,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           adaptiveHeight: true
         },
     }
