@@ -348,6 +348,12 @@ button {
 	}
 }
 
+.services {
+	.uni-slider__item {
+		padding-bottom: 25px;
+	}
+}
+
 .slick-dots {
 	display: flex;
 	font-size: 0;
@@ -459,6 +465,24 @@ button {
 	&--min-height {
 		.uni-slider__item {
 			min-height: 550px;
+		}
+	}
+
+	&__button {
+		margin: 0 25px;
+		padding: 5px 30px;
+		border: 2px solid rgba(0, 10, 26, 0.2);
+		font-size: 14px;
+		font-weight: 500;
+		color: #191716;
+		max-width: 144px;
+		text-align: center;
+		transition: all .5s ease;
+
+		&:hover {
+			background-color: #0A847E;
+			color: $white;
+			border: 2px solid #0A847E;
 		}
 	}
 }
@@ -1320,7 +1344,12 @@ button {
 
 
 /************* Media *****************************/
-
+@media (max-width: 1250px) {
+	.registration-box-form {
+		padding-right: 20px;
+		max-width: 600px;
+	}
+}
 
 @media (max-width: 1100px) {
 	.header-info {
@@ -1753,6 +1782,32 @@ button {
 
 		&__button {
 			width: 100%;
+		}
+	}
+
+	.registration-box {
+		flex-direction: column;
+
+		&__title {
+			font-size: 32px;
+		}
+
+		&__caption {
+			margin-top: 13px;
+		}
+
+		&__image {
+			min-height: 100vh;
+			width: 100%;
+		}
+	}
+
+	.registration-box-form {
+		max-width: 100%;
+		margin-left: 0;
+
+		.registration-form__columns {
+			margin-top: 24px;
 		}
 	}
 
