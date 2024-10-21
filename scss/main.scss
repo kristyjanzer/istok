@@ -343,7 +343,7 @@ button {
 .services,
 .section-slider {
 	&__slider {
-		padding-bottom: 33px;
+		padding-bottom: 30px;
 		margin: 45px -10px 0;
 	}
 }
@@ -537,6 +537,20 @@ button {
 
 	&__item {
 		list-style-type: disc;
+
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
+}
+
+.finishing-specific {
+	margin-top: 20px;
+
+	&__text {
+		font-size: 16px;
+		font-weight: 500;
+		color: $text;
 
 		&:not(:first-child) {
 			margin-top: 10px;
