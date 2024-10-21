@@ -1387,6 +1387,12 @@ button {
 			flex: 1 0 40%;
 		}
 	}
+
+	.finishing-slider {
+		&__title {
+			min-height: auto;
+		}
+	}
 }
 
 @media (max-width: 900px) {
