@@ -467,6 +467,7 @@ button {
 	.slick-slide {
 		height: auto;
 	}
+
 	&__row {
 		display: flex;
 		flex-direction: column;
@@ -479,6 +480,9 @@ button {
 		font-size: 24px;
 		font-weight: 500;
 		color: $text;
+		min-height: 60px;
+		display: flex;
+		align-items: start;
 	}
 
 	&__price {
@@ -576,6 +580,7 @@ button {
 	&__title {
 		color: $white;
 		font-size: 40px;
+		font-weight: 500;
 		text-align: center;
 	}
 
@@ -789,6 +794,7 @@ button {
     color: $text;
     padding: 18px 25px;
     font-size: 16px;
+		font-weight: 500;
     min-height: 60px;
 	}
 
@@ -814,6 +820,7 @@ button {
 		color: $white;
 		font-size: 16px;
 		max-width: 675px;
+		margin-right: 15px;
 	}
 
 	&__columns {
@@ -916,6 +923,72 @@ button {
 
 #file-upload-button {
 	cursor: pointer;
+}
+
+.registration-box {
+	display: flex;
+
+	&__item {
+		display: flex;
+    flex-direction: column;
+	}
+
+	&__title {
+		color: $white;
+		font-size: 40px;
+		font-weight: 500;
+	}
+
+	&__caption {
+		margin-top: 40px;
+		margin-bottom: 25px;
+		font-weight: 400;
+		font-size: 18px;
+		color: $white;
+	}
+
+	&__image {
+		background-image: url('../img/finishing.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 20%;
+		min-height: 100%;
+		width: 45%;
+	}
+
+	&__form {
+		margin-left: auto;
+		max-width: 700px;
+	}
+}
+
+.registration-box-form {
+	padding: 73px 100px 73px 20px;
+
+	.registration-form {
+		&__fields--width {
+			margin-top: 20px;
+
+			> div {
+				flex: 1 0 50%;
+			}
+		}
+
+		&__columns {
+			margin-top: 47px;
+			align-items: flex-start;
+		}
+
+		&__descr {
+			font-size: 14px;
+		}
+	}
+}
+
+.registration-finishing {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 
