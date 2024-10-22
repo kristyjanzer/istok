@@ -59,7 +59,7 @@ img {
 }
 
 b, strong {
-	font-weight: bold;
+	font-weight: 600;
 }
 
 a {
@@ -480,9 +480,9 @@ button {
 		transition: all .5s ease;
 
 		&:hover {
-			background-color: #0A847E;
+			background-color: $accent;
 			color: $white;
-			border: 2px solid #0A847E;
+			border: 2px solid $accent;
 		}
 	}
 }
@@ -986,7 +986,7 @@ button {
 	}
 
 	&__image {
-		background-image: url('../img/finishing.jpeg');
+		background-image: url('../img/finishing.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 30% 20%;
@@ -1188,7 +1188,7 @@ button {
 	}
 
 	&__connect {
-		margin-right: 127px;
+		margin-right: 70px;
 
 		.connect-box__time {
 			font-size: 16px;
@@ -1246,39 +1246,6 @@ button {
 	}
 }
 
-#services,
-#finishing {
-	.heading {
-		background-image: url('../img/heading/heading-3.jpeg');
-	}
-}
-
-#company,
-#building {
-	.heading {
-		background-image: url('../img/heading/heading-1.jpeg');
-	}
-}
-
-#vacancy,
-#partial-repair,
-#electrical {
-	.heading {
-		background-image: url('../img/heading/heading-4.jpeg');
-	}
-}
-
-#works {
-	.heading {
-		background-image: url('../img/heading/heading-5.jpeg');
-	}
-}
-
-#contacts {
-	.heading {
-		background-image: url('../img/heading/heading-2.jpeg');
-	}
-}
 
 
 .heading {
@@ -1297,6 +1264,34 @@ button {
 	}
 }
 
+.services-heading,
+.finishing-heading {
+	background-image: url('../img/heading/heading-3.jpg');
+}
+
+.building-heading,
+.company-heading {
+	background-image: url('../img/heading/heading-1.jpg');
+}
+
+.vacancy-heading,
+.partial-repair-heading,
+.electrical-heading {
+	background-image: url('../img/heading/heading-4.jpg');
+}
+
+.works-heading {
+	background-image: url('../img/heading/heading-5.jpg');
+}
+
+.contacts-heading {
+	background-image: url('../img/heading/heading-2.jpg');
+}
+
+.minor-repairs-heading {
+	background-image: url('../img/heading/heading-6.jpg');
+}
+
 
 
 .section-slider {
@@ -1311,13 +1306,17 @@ button {
 	}
 }
 
-.documents {
+.important-section {
 	&__columns {
 		margin-top: 33px;
 	}
+
+	&__discount {
+		margin-bottom: 80px;
+	}
 }
 
-.documents-columns {
+.important-section-columns {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -1334,7 +1333,7 @@ button {
 	}
 
 	&__icon {
-		margin-right: 25px;
+		margin-right: 20px;
 	}
 
 	&__text {
@@ -1345,6 +1344,11 @@ button {
 			text-decoration: underline;
 		}
 	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+	}
 }
 
 .doing {
@@ -1353,6 +1357,69 @@ button {
 	}
 }
 
+
+.minor-repair-slider {
+	.slick-slide {
+		> div {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__item {
+		background-color: $white;
+		border: 2px solid rgba(10, 132, 126, 0.5);
+		padding: 32px 28px;
+		min-height: 300px;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	&__number {
+		width: 50px;
+		height: 50px;
+		background-color: $accent;
+		color: $white;
+		font-size: 32px;
+		font-weight: 600;
+		border-radius: 50%;
+		display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+
+	&__title {
+		color: $accent;
+		font-size: 20px;
+		font-weight: 600;
+		margin-top: 14px;
+	}
+
+	&__text {
+		font-size: 16px;
+		font-weight: 500;
+		color: $black;
+		margin-top: 16px;
+	}
+}
+
+.discount-section {
+	background-image: url('../img/discount.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 250px;
+	padding: 57px 45px;
+
+	&__text {
+		max-width: 490px;
+		font-size: 36px;
+		font-weight: 500;
+	}
+}
 
 
 
@@ -1910,8 +1977,14 @@ button {
 	.section-slider {
 		padding: 50px 0;
 	}
+
+	.important-section {
+		&__discount {
+			margin-bottom: 0;
+		}
+	}
 	
-	.documents-columns {
+	.important-section-columns {
 		flex-direction: column;
 		align-items: flex-start;
 
@@ -1929,7 +2002,26 @@ button {
 			font-size: 18px;
 		}
 	}
+
+	.minor-repair-slider {
+		&__postscript {
+			margin-top: 28px;
+		}
+	}
+	
+	.discount-section {
+		background-image: url('../img/discount-mobile.jpg');
+		margin-right: -20px;
+		margin-left: -20px;
+		min-height: 500px;
+		padding: 60px 20px;
+
+		&__text {
+			font-size: 30px;
+		}
+	}
 }
+
 
 
 

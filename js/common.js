@@ -49,7 +49,7 @@ $('.uni-slider').slick({
   ]
 });
 
-// Services Slider
+// Finishing Slider
 $('.finishing-slider').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -75,6 +75,32 @@ $('.finishing-slider').slick({
           arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
+          adaptiveHeight: true
+        },
+    }
+  ]
+});
+
+// Minor Repairs
+$('.minor-repair-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  slidesPerRow: 2,
+  dots: false,
+  rows: 2,
+  arrows: false,
+  infinite: false,
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 900,
+        settings: {
+          rows: 1,
+          dots: true,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          slidesPerRow: 1,
           adaptiveHeight: true
         },
     }
