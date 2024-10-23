@@ -343,8 +343,7 @@ button {
 .services,
 .section-slider {
 	&__slider {
-		padding-bottom: 30px;
-		margin: 45px 0 0;
+		margin: 45px -10px 0;
 	}
 }
 
@@ -395,6 +394,8 @@ button {
 }
 
 .slick-slide {
+	margin: 0 10px;
+	
 	> div {
 		display: flex;
 		min-height: 100%;
@@ -436,7 +437,7 @@ button {
 	}
 
 	&__column {
-		margin: 25px;
+		padding: 25px;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
@@ -551,7 +552,7 @@ button {
 }
 
 .finishing-specific {
-	margin-top: 20px;
+	margin-top: 50px;
 
 	&__text {
 		font-size: 16px;
@@ -1397,18 +1398,52 @@ button {
 	}
 }
 
-.industrial-slider {
-	&__item {
-		background-color: $accent;
+
+.industrial-slider-info {
+	border-top: 2px solid $text;
+	margin-top: 15px;
+
+	&__row {
+		margin-top: 15px;
 	}
 
 	&__price {
 		font-size: 16px;
 		font-weight: 600;
+		color: $accent;
 
 		& + & {
 			margin-top: 5px;
 		}
+	}
+}
+
+.industrial-slider-accent-item {
+	background-color: $accent;
+
+	&__row {
+		padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100%;
+	}
+
+	&__descr,
+	&__text {
+		font-size: 20px;
+		font-weight: 500;
+		color: $white;
+	}
+	
+	&__descr {
+		padding-bottom: 27px;
+		border-bottom: 2px solid $white;
+	}
+
+	&__text {
+		margin-top: 27px;
+		font-weight: 600;
 	}
 }
 
@@ -1458,6 +1493,10 @@ button {
 		font-weight: 500;
 		color: $black;
 		margin-top: 16px;
+	}
+
+	&__postscript {
+		margin-top: 30px;
 	}
 }
 
@@ -1899,6 +1938,7 @@ button {
 	.section-slider {
 		&__slider {
 			margin-top: 26px;
+			padding-bottom: 30px;
 		}
 	}
 
@@ -2028,6 +2068,10 @@ button {
 		}
 	}
 
+	.finishing-specific {
+		margin-top: 30px;
+	}
+
 
 	.section-slider {
 		padding: 50px 0;
@@ -2055,12 +2099,6 @@ button {
 
 		&__text {
 			font-size: 18px;
-		}
-	}
-
-	.minor-repair-slider {
-		&__postscript {
-			margin-top: 28px;
 		}
 	}
 	
@@ -2095,6 +2133,10 @@ button {
 			width: 100%;
 			height: 100%;
 		}
+	}
+
+	.uni-slider {
+		padding-bottom: 30px;
 	}
 }
 
