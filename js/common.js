@@ -22,6 +22,9 @@ $(".uni-columns .uni-columns__image").clone().appendTo(".uni-image--mobile");
 
 
 
+// ScrollTo
+$(".to-registration").mPageScroll2id();
+
 
 // Services Slider
 $('.uni-slider').slick({

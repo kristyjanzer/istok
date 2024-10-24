@@ -395,7 +395,7 @@ button {
 
 .slick-slide {
 	margin: 0 10px;
-	
+
 	> div {
 		display: flex;
 		min-height: 100%;
@@ -1307,6 +1307,11 @@ button {
 	padding: 100px 0 110px;
 }
 
+.contacts {
+	&__map {
+		margin-top: 45px;
+	}
+}
 
 .contacts-links {
 	&__box {
