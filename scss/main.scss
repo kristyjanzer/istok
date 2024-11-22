@@ -193,7 +193,15 @@ button {
 	}
 
 	&__socials {
-		margin-right: 90px;
+
+		&:not(:last-child) {
+			margin-right: 65px;
+		}
+
+		&-row {
+			margin-right: 90px;
+			display: flex;
+		}
 	}
 
 	&__button {
@@ -231,7 +239,7 @@ button {
 	}
 }
 
-.header-socials {
+.socials {
 	display: flex;
 	align-items: center;
 
@@ -1251,6 +1259,10 @@ button {
 	&__connect-box {
 		margin-top: 44px;
 	}
+
+	&__socials {
+		margin-top: 40px;
+	}
 }
 
 
@@ -1612,6 +1624,10 @@ button {
 		&__socials {
 			margin-right: 0;
 			margin-top: 33px;
+
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
 		}
 
 		&__button {
@@ -1656,7 +1672,7 @@ button {
 			order: 2;
 		}
 
-		.header-socials {
+		.header-info__socials-row {
 			order: 3;
 		}
 	}
@@ -1667,10 +1683,10 @@ button {
 		}
 	}
 
-	.header-socials {
+	.socials {
 		&__icon {
 			&:not(:last-child) {
-				margin-right: 35px;
+				margin-right: 30px;
 			}
 
 			svg {
@@ -2069,6 +2085,10 @@ button {
 
 	.footer-connect {
 		&__connect-box {
+			margin-top: 16px;
+		}
+
+		&__socials {
 			margin-top: 16px;
 		}
 	}
