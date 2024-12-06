@@ -204,3 +204,41 @@ $('.registration-form-dropzone__row').bind('dragover', function () {
 $('.registration-form-dropzone__row').bind('dragleave', function () {
   $('.registration-form-dropzone').removeClass('image-dropping');
 });
+
+
+// Modal Form
+$('.callback-button').click(function() {
+  $('.main-modal__overlay').fadeIn(400, 
+    function() { 
+      $('.main-modal')
+      .css('display', 'block')
+      .animate({opacity: 1, top: '50%'}, 200);
+  });
+});
+
+$('.main-modal__close, .main-modal__overlay').click(function () {
+  $('.main-modal')
+    .animate({opacity: 0, top: '45%'}, 200, 
+    function() { 
+      $(this).css('display', 'none'); 
+      $('.main-modal__overlay').fadeOut(400);
+    }
+  );
+});
+
+
+// Dropmenu
+$('.main-form-select').click(function () {
+  $(this).attr('tabindex', 1).focus();
+  $(this).toggleClass('main-form-select--active');
+  $(this).find('.main-form-select__options').slideToggle(300);
+});
+$('.main-form-select').focusout(function () {
+  $(this).removeClass('main-form-select--active');
+  $(this).find('.main-form-select__options').slideUp(300);
+});
+$('.main-form-select__option').click(function () {
+  $(this).parents('.main-form-select').find('.main-form-select__span').text($(this).text());
+  $(this).parents('.main-form-select').find('.main-form-select__icon').addClass("main-form-select__icon--ok");
+  $(this).parents('.main-form-select').find('.main-form-select__input').attr('value', $(this).attr('id'));
+});
