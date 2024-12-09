@@ -1310,6 +1310,7 @@ button {
 
 	&__row {
 		padding: 60px 0 68px;
+		max-width: 64%;
 	}
 
 	&__title {
@@ -2547,14 +2548,15 @@ button {
 		overflow: auto;
 		height: 86vh;
 		padding: 28px 15px;
-	}
 
-	.main-modal__title {
-		font-size: 28px;
-		margin-top: 15px;
-	}
-	.main-modal__subtitle {
-		font-size: 16px;
+		&__title {
+			font-size: 28px;
+			margin-top: 15px;
+		}
+
+		&__subtitle {
+			font-size: 16px;
+		}
 	}
 }
 
