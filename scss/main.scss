@@ -460,6 +460,7 @@ button {
 		border: 2px solid rgba(10, 132, 126, 0.5);
 		background: $white;
 		height: auto;
+		max-width: calc(33% - 16px); 
 
 		&:not(:last-child) {
 			margin-right: 30px;
@@ -2487,6 +2488,10 @@ button {
 
 	.uni-slider {
 		padding-bottom: 30px;
+
+		&__item {
+			max-width: 100%;
+		}
 	}
 
 	.not-found {
