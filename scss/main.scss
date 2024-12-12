@@ -1240,7 +1240,7 @@ button {
 	}
 
 	&__connect {
-		margin-right: 70px;
+		margin-right: 110px;
 
 		.connect-box__time {
 			font-size: 16px;
@@ -1250,7 +1250,7 @@ button {
 
 .footer-info {
 	display: flex;
-	gap: 45px;
+	gap: 8%;
 
 	&__title {
 		color: $white;
@@ -1274,10 +1274,16 @@ button {
 }
 
 .footer-info-list {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 15px;
+
 	&__item {
-		&:not(:first-child) {
-			margin-top: 15px;
-		}
+		width: 100%;
+    max-width: 250px;
 	}
 
 	&__link {
@@ -2401,12 +2407,6 @@ button {
 		&__column {
 			flex-direction: column;
 		}
-
-		&__list {
-			&:not(:first-child) {
-				margin-top: 15px;
-			}
-		}
 	}
 
 	.footer-connect {
@@ -2509,6 +2509,12 @@ button {
 
 		&__button {
 			margin-top: 37px;
+		}
+	}
+
+	.footer-info-list {
+		&__item  {
+			max-width: 100%;
 		}
 	}
 }
