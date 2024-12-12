@@ -1271,6 +1271,10 @@ button {
 		display: flex;
 		gap: 12%;
 	}
+
+	&__box {
+		margin-left: 25px;
+	}
 }
 
 .footer-info-list {
@@ -2406,6 +2410,10 @@ button {
 
 		&__column {
 			flex-direction: column;
+		}
+
+		&__box {
+			margin-left: 0;
 		}
 	}
 
