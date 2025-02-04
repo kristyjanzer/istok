@@ -263,8 +263,8 @@ $('.pagination').attr('page', paginationPage);
 
 // Gallery Slider
 function swiperSlider3dCategory() {
-  if ($('.category-3d-slider').length) {
-    var swiperCategory = new Swiper('.category-3d-slider', {
+  if ($('.gallery-slider__container').length) {
+    var swiperCategory = new Swiper('.gallery-slider__container', {
         mode:'horizontal',
         loop: true,
         speed: 500,
@@ -281,8 +281,8 @@ function swiperSlider3dCategory() {
           slideShadows: true,
         },
         navigation: {
-          nextEl: '.slider-custom-nav .next-btn',
-          prevEl: '.slider-custom-nav .prev-btn',
+          nextEl: '.gallery-slider__nav .next-btn',
+          prevEl: '.gallery-slider__nav .prev-btn',
         },
         breakpoints: {
         320: {
