@@ -268,7 +268,7 @@ function swiperSlider3dCategory() {
         mode:'horizontal',
         loop: true,
         speed: 500,
-        slidesPerView: 3,
+        slidesPerView: 1,
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
@@ -285,23 +285,41 @@ function swiperSlider3dCategory() {
           prevEl: '.gallery-slider__nav .prev-btn',
         },
         breakpoints: {
-        320: {
-          slidesPerView: 1,
-          effect: 'slide',
-          autoHeight: true,
-        },
-        851: {
+        800: {
           slidesPerView: 3,
-          effect: 'coverflow',
-          autoHeight: false,
+          spaceBetween: 0,
         },
-        1151: {
-          slidesPerView: 3,
-          effect: 'coverflow',
-        }
+        // 851: {
+        //   slidesPerView: 3,
+        //   effect: 'coverflow',
+        //   autoHeight: false,
+        // },
+        // 1151: {
+        //   slidesPerView: 3,
+        //   effect: 'coverflow',
+        // }
       }
       });
   }
 }
 
 swiperSlider3dCategory();
+
+
+// Gallery
+$(".gallery-slider").magnificPopup({
+  delegate: "a",
+  type: "image",
+  mainClass: "mfp-img-mobile",
+  gallery: {
+    enabled: true,
+    navigateByImgClick: true,
+  },
+  image: {
+    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+  },
+  zoom: {
+    enabled: true,
+    duration: 700
+  },
+});
