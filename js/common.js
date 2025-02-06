@@ -285,7 +285,7 @@ function swiperSlider3dCategory() {
           prevEl: '.gallery-slider__nav .prev-btn',
         },
         breakpoints: {
-        800: {
+        920: {
           slidesPerView: 3,
           spaceBetween: 0,
         },

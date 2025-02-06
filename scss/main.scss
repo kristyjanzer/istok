@@ -1918,7 +1918,7 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-  margin: 70px 0 20px;
+  margin: 70px 0 0;
 
 	&__icon {
 		width: 35px;
@@ -1938,7 +1938,7 @@ button {
 
     &:first-child,
     &:last-child {
-      padding: 0 15px;
+      padding: 0;
 			font-size: 0;
     }
 
@@ -2082,6 +2082,19 @@ button {
 	&__slider {
 		margin-top: 68px;
 	}
+
+	&__box + &__box {
+		margin-top: 60px;
+	}
+
+	&__line {
+		border-top: 1px solid #9E9E9E;
+		margin-top: 70px;
+	}
+
+	&__pagination {
+		margin-top: 70px;
+	}
 }
 
 
@@ -2089,11 +2102,10 @@ button {
 .gallery-slider {
 	position: relative;
 	overflow: hidden;
-	min-height: 600px;
 
 	&__container {
 		perspective: 1200px;
-		max-height: 528px;
+		// max-height: 528px;
 		transition: opacity 0.6s ease;
 		width: 133%;
 		position: relative;
@@ -2172,10 +2184,9 @@ button {
 	}
 
 	&__nav {
-    right: -5.4%;
+    right: -5.2%;
     left: auto;
-    bottom: -20px;
-    top: auto;
+    bottom: 30px;
     z-index: 55;
 		height: 0;
     position: absolute;
@@ -2243,16 +2254,19 @@ button {
 	}
 
 	&__caption {
-		margin-top: 20px;
 		font-size: 20px;
 		font-weight: 500;
 		color: $accent;
 		opacity: 0;
 		transition: opacity 0.6s ease;
-		margin-left: 5px;
+		margin: 15px 0 10px 5px;
+		width: 770px;
 	}
 }
 
+.swiper-wrapper {
+	margin-bottom: 20px;
+}
 
 
 
@@ -2939,7 +2953,29 @@ button {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 919px) {
+	.swiper-wrapper {
+		margin-bottom: 30px;
+	}
+
+	.gallery-section {
+		&__row {
+			padding: 55px 0;
+		}
+
+		&__slider {
+			margin-top: 40px;
+		}
+
+		&__title {
+			font-size: 22px;
+		}
+
+		&__descr {
+			font-size: 16px;
+		}
+	}
+
 	.gallery-slider {
 		margin-left: -20px;
     margin-right: -20px;
@@ -2947,14 +2983,16 @@ button {
 		&__container {
 			left: 0;
 			width: 100%;
+			padding-bottom: 30px;
+		}
+
+		&__caption {
+			margin: 15px 20px;
+			width: 93%;
 		}
 
 		&__box {
 			width: 100%;
-		}
-
-		&__caption {
-			margin-left: 20px;
 		}
 
 		.swiper-slide .gallery-slider__img {
@@ -2965,6 +3003,7 @@ button {
 		&__nav {
 			right: 50%;
 			transform: translateY(-50%);
+			bottom: 40px;
 
 			.prev-btn {
 				left: -35px;
@@ -2976,8 +3015,6 @@ button {
 		}
 	}
 }
-
-
 
 
 
@@ -3023,10 +3060,6 @@ button {
 		&__subtitle {
 			font-size: 16px;
 		}
-	}
-
-	.gallery-slider {
-		min-height: 500px;
 	}
 }
 
